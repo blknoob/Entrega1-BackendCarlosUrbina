@@ -1,6 +1,5 @@
 const fs = require("fs");
 
-
 class CartManager {
   constructor() {
     this.dbCarts = "./db/carts.json";
@@ -11,7 +10,6 @@ class CartManager {
       : 1;
   }
 
-  // Cargar carritos desde el archivo JSON
   loadCarts() {
     try {
       if (!fs.existsSync(this.dbCarts)) {
@@ -36,24 +34,18 @@ class CartManager {
     }
   }
 
-
-  // Guardar carritos en el archivo JSON
   saveCarts() {
     fs.writeFileSync(this.dbCarts, JSON.stringify(this.carts, null, 2));
   }
 
-  // Obtener todos los carritos
   getCarts() {
     return this.carts;
-    
   }
 
-  // Obtener carrito por ID
   getCartById(id) {
     return this.carts.find((cart) => cart.id === id) || null;
   }
 
-  // Crear un nuevo carrito
   createCart() {
     const newCart = { id: this.id++, products: [] };
     this.carts.push(newCart);
@@ -61,7 +53,6 @@ class CartManager {
     return newCart;
   }
 
-  // Agregar un producto a un carrito
   addProductToCart(cartId, productId) {
     const cart = this.getCartById(cartId);
 
@@ -82,10 +73,12 @@ class CartManager {
       cart.products.push({ id: productId, quantity: 1 });
     }
     this.saveCarts();
-    return { message: "Producto agregado correctamente", products: cart.products };
+    return {
+      message: "Producto agregado correctamente",
+      products: cart.products,
+    };
   }
 
-  // Eliminar un carrito
   deleteCart(id) {
     const index = this.carts.findIndex((cart) => cart.id === id);
     if (index === -1) return { error: "Carrito no encontrado" };

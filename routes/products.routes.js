@@ -4,12 +4,10 @@ const ProductManager = require("../managers/productManager");
 const router = express.Router();
 const productManager = new ProductManager();
 
-// Endpoint para obtener todos los productos
 router.get("/", (req, res) => {
   res.json(productManager.getProducts());
 });
 
-// Endpoint para obtener un producto por ID
 router.get("/:pid", (req, res) => {
   const product = productManager.getProductById(parseInt(req.params.pid));
   if (!product)
@@ -17,7 +15,6 @@ router.get("/:pid", (req, res) => {
   res.json(product);
 });
 
-// Endpoint para agregar un nuevo producto
 router.post("/", (req, res) => {
   const { title, description, code, price, stock, category, thumbnail } =
     req.body;
@@ -37,7 +34,6 @@ router.post("/", (req, res) => {
   });
 });
 
-// Endpoint para actualizar un producto
 router.put("/:pid", (req, res) => {
   const updatedProduct = productManager.updateProduct(
     parseInt(req.params.pid),
@@ -51,7 +47,6 @@ router.put("/:pid", (req, res) => {
   });
 });
 
-// Endpoint para eliminar un producto
 router.delete("/:pid", (req, res) => {
   productManager.deleteProduct(parseInt(req.params.pid));
   res.json({ message: "Producto eliminado correctamente" });
