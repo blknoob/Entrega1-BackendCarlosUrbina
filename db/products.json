@@ -1,0 +1,68 @@
+[
+  {
+    "id": 1,
+    "title": "Bicicleta de montaña",
+    "description": "Bicicleta resistente para terrenos difíciles",
+    "code": "BMT500",
+    "price": 500,
+    "status": true,
+    "stock": 10,
+    "category": "Ciclismo",
+    "thumbnail": "bicicleta_montana.jpg"
+  },
+  {
+    "id": 2,
+    "title": "Casco de ciclismo",
+    "description": "Casco seguro y cómodo para ciclistas",
+    "code": "CSC50",
+    "price": 50,
+    "status": true,
+    "stock": 20,
+    "category": "Accesorios",
+    "thumbnail": "casco_ciclismo.jpg"
+  },
+  {
+    "id": 3,
+    "title": "Guantes de ciclismo",
+    "description": "Guantes acolchados para mayor comodidad",
+    "code": "GCC20",
+    "price": 20,
+    "status": true,
+    "stock": 30,
+    "category": "Accesorios",
+    "thumbnail": "guantes_ciclismo.jpg"
+  },
+  {
+    "id": 4,
+    "title": "Rodillo de entrenamiento",
+    "description": "Rodillo para entrenar en interiores",
+    "code": "RDT300",
+    "price": 300,
+    "status": true,
+    "stock": 5,
+    "category": "Equipamiento",
+    "thumbnail": "rodillo_entrenamiento.jpg"
+  },
+  {
+    "id": 5,
+    "title": "Luz delantera para bicicleta",
+    "description": "Luz LED para mejorar la visibilidad nocturna",
+    "code": "LD25",
+    "price": 25,
+    "status": true,
+    "stock": 15,
+    "category": "Seguridad",
+    "thumbnail": "luz_delantera.jpg"
+  },
+  {
+    "id": 6,
+    "title": "Bomba de aire portátil",
+    "description": "Bomba de aire compacta y fácil de transportar",
+    "code": "BA30",
+    "price": 30,
+    "status": true,
+    "stock": 10,
+    "category": "Accesorios",
+    "thumbnail": "bomba_aire.jpg"
+  }
+]
